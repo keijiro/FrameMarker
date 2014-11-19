@@ -12,7 +12,7 @@ SceneSettings:
     backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: .192156866, g: .192156866, b: .192156866, a: 1}
   m_FogMode: 3
   m_FogDensity: .0700000003
@@ -132,7 +132,7 @@ Camera:
     height: 1
   near clip plane: .00999999978
   far clip plane: 100
-  field of view: 40
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -224,7 +224,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 3
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -257,7 +257,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 3
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -384,7 +384,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: .600000024
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -445,13 +445,13 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 0
+    type: 5
     radius: 5
     angle: 25
     length: 5
-    boxX: 1
-    boxY: 1
-    boxZ: 1
+    boxX: 6
+    boxY: 0
+    boxZ: 2
     placementMode: 0
     m_Mesh: {fileID: 0}
     randomDirection: 1
@@ -459,7 +459,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 60
+      scalar: 30
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -501,7 +501,7 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 0
   SizeModule:
-    enabled: 1
+    enabled: 0
     curve:
       scalar: 1
       maxCurve:
@@ -548,7 +548,7 @@ ParticleSystem:
   RotationModule:
     enabled: 1
     curve:
-      scalar: 5.23598766
+      scalar: 1.74532926
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -810,19 +810,14 @@ ParticleSystem:
       minMaxState: 0
     inWorldSpace: 0
   ForceModule:
-    enabled: 0
+    enabled: 1
     x:
-      scalar: 0
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
-          value: 1
+          value: -1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -832,30 +827,20 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
-          value: 0
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 3
     y:
-      scalar: 0
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
-          value: 1
+          value: -1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -869,26 +854,16 @@ ParticleSystem:
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-        - time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 3
     z:
-      scalar: 0
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
-          value: 1
+          value: -1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -898,20 +873,15 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
-          value: 0
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 3
     inWorldSpace: 0
-    randomizePerFrame: 0
+    randomizePerFrame: 1
   ExternalForcesModule:
     enabled: 0
     multiplier: 1
@@ -1255,8 +1225,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560943225}
-  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1271,8 +1241,9 @@ GameObject:
   - 4: {fileID: 847379191}
   - 33: {fileID: 847379190}
   - 23: {fileID: 847379189}
+  - 114: {fileID: 847379192}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Frame Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1312,11 +1283,233 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 847379188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.75}
+  m_LocalPosition: {x: 0, y: 0, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &847379192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 847379188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770ca474d5ff24f0a984ee2613dae537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerTextures:
+  - {fileID: 2800000, guid: 6a5cef621a8014b44980d614af9a30b1, type: 3}
+  - {fileID: 2800000, guid: e9fbe13f3028e40be91f7c04e50f4292, type: 3}
+  - {fileID: 2800000, guid: a12f25584a7f94697b3d5f95425494bf, type: 3}
+  - {fileID: 2800000, guid: c48fd0ed27f12424a99d53cd68b21a91, type: 3}
+  - {fileID: 2800000, guid: 20626326412d94baa8afcb3a3d91ed88, type: 3}
+  - {fileID: 2800000, guid: e5ece343f13c042faab50ca083b5cbeb, type: 3}
+  - {fileID: 2800000, guid: 7f590f994cbbd48028c9cde17ffdd9e2, type: 3}
+  - {fileID: 2800000, guid: f5382e041a6d64cfbbbf63fe86691da6, type: 3}
+  - {fileID: 2800000, guid: 35cc0de7e8b95414bbb64c2314a745a6, type: 3}
+  - {fileID: 2800000, guid: d890ecedba7d7451fa03f5cbe0ddb3ea, type: 3}
+  - {fileID: 2800000, guid: e34a2af53e1a74a04b03cce7182660f8, type: 3}
+  - {fileID: 2800000, guid: 332cd9ca8ff7f48f7b0855d78b64b0fc, type: 3}
+  - {fileID: 2800000, guid: fe3360a495f8241a2964ffbe44f857f5, type: 3}
+  - {fileID: 2800000, guid: f40ccc9eb9ac1418aac070dae772a26b, type: 3}
+  - {fileID: 2800000, guid: 546453cca94174968805d3b041be9f7f, type: 3}
+  - {fileID: 2800000, guid: a5a32fcec239a4c618c3d2bad7969d4b, type: 3}
+  - {fileID: 2800000, guid: 21b1427bad07d4580a74e5150651abb1, type: 3}
+  - {fileID: 2800000, guid: 12dcb4283137e4beb819ce5af4515325, type: 3}
+  - {fileID: 2800000, guid: 806100a56143e4ca2867e451edfba495, type: 3}
+  - {fileID: 2800000, guid: dd477498dda914d88bbdc757f58c166a, type: 3}
+  - {fileID: 2800000, guid: aa82732877f6b42ef8b320c3a2781f0f, type: 3}
+  - {fileID: 2800000, guid: 87c4d4791128f47cfb53a23bc7817b28, type: 3}
+  - {fileID: 2800000, guid: 4854be88d29cf4274a0c3ebf79c31f31, type: 3}
+  - {fileID: 2800000, guid: c850dc1dbd4a34875a2da013b59a4356, type: 3}
+  - {fileID: 2800000, guid: ae84fbc0df8634c83a1a7a6488cfdc03, type: 3}
+  - {fileID: 2800000, guid: e7455548dd7b043939777b81a3c6c672, type: 3}
+  - {fileID: 2800000, guid: 0253a973b43ef4643b4b0f66de943e38, type: 3}
+  - {fileID: 2800000, guid: 9b0a2390e4d534af79d52bf4677ffaf6, type: 3}
+  - {fileID: 2800000, guid: 17013c2a0f233499cba2d209a967ca2f, type: 3}
+  - {fileID: 2800000, guid: c6520e350594246afba941f8f9cdac7c, type: 3}
+  - {fileID: 2800000, guid: e38ca599d61bd4699bf53a8b4edc37bc, type: 3}
+  - {fileID: 2800000, guid: 9b84043e98a6b4bd8885f3e3835a3769, type: 3}
+  markerIndex: 0
+  labelStyleTop:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_Alignment: 1
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  labelStyleLeft:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_Alignment: 6
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  labelStyleRight:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_Alignment: 8
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
 --- !u!1 &1472410350
 GameObject:
   m_ObjectHideFlags: 0
